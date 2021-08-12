@@ -19,32 +19,105 @@ namespace TIMAmathes
                 Random gpg = new Random();
                 string questions;
                 int s = 0;
-             
-                
-                while (f == 0)
+
+
+                if (num == "1")
                 {
-
-                    int a = gpg.Next(0, 1000);
-                    int b = gpg.Next(0, 1000);
-                    int end = 0;
-                    int j = 0;
-                    while (j == 0)
+                    while (f == 0)
                     {
 
-                        Console.WriteLine($"сколько будет: {a} + {b}");
+                        int a = gpg.Next(0, 1000);
+                        int b = gpg.Next(0, 1000);
                         
-                        end = (Convert.ToInt32(Console.ReadLine()));
-                        
+                        int j = 0;
+                        while (j == 0)
+                        {
 
-                    }
-                    s = 0;
-                    Console.WriteLine("Хочешь ещё пример?");
-                    questions = Console.ReadLine();
-                    if (questions == "Нет" || questions == "нет")
-                    {
-                        f = 1;
+                            Console.WriteLine($"сколько будет: {a} + {b}");
+
+                            int end = (Convert.ToInt32(Console.ReadLine()));
+                            if (end == a + b)
+                            {
+                                j = 1;
+                                Console.WriteLine("Молодец, правильно!");
+                            }
+                            else j = 0;
+
+                        }
+                        s = 0;
+                        Console.WriteLine("Хочешь ещё пример?");
+                        questions = Console.ReadLine();
+                        if (questions == "Нет" || questions == "нет")
+                        {
+                            f = 1;
+                        }
                     }
                 }
+                if (num == "2")
+                {
+                    while (f == 0)
+                    {
+
+                        int a = gpg.Next(0, 1000);
+                        int b = gpg.Next(0, 1000);
+                        
+                        int j = 0;
+                        while (j == 0)
+                        {
+
+                            Console.WriteLine($"сколько будет: {a} - {b}");
+
+                            int end = (Convert.ToInt32(Console.ReadLine()));
+                            if (end == a - b)
+                            {
+                                j = 1;
+                                Console.WriteLine("Молодец, правильно!");
+                            }
+                            else j = 0;
+
+                        }
+                        s = 0;
+                        Console.WriteLine("Хочешь ещё пример?");
+                        questions = Console.ReadLine();
+                        if (questions == "Нет" || questions == "нет")
+                        {
+                            f = 1;
+                        }
+                    }
+                }
+                if (num == "3")
+                {
+                    while (f == 0)
+                    {
+
+                        int a = gpg.Next(1, 10);
+                        int b = gpg.Next(1, 10);
+                        
+                        int j = 0;
+                        while (j == 0)
+                        {
+
+                            Console.WriteLine($"сколько будет: {a} * {b}");
+
+                            int end = (Convert.ToInt32(Console.ReadLine()));
+                            if (end == a * b)
+                            {
+                                j = 1;
+                                Console.WriteLine("Молодец, правильно!");
+                            }
+                            else j = 0;
+
+                        }
+                        s = 0;
+                        Console.WriteLine("Хочешь ещё пример?");
+                        questions = Console.ReadLine();
+                        if (questions == "Нет" || questions == "нет")
+                        {
+                            f = 1;
+                        }
+                    }
+                }
+
 
                 if (num == "4")
                 {
@@ -302,45 +375,6 @@ namespace TIMAmathes
                     f = 1;
                 }
             }
-
-        }
-        static void AdditionAndSubtractionAndMultiplication(string num, int end, int a, int b)
-        {
-            int j = 0;
-            Random gpg = new Random();
-            int h = 0;
-            
-            if (num == "1")
-            {
-                
-                if (end == a - b)
-                {
-                    j = 1;
-                }
-                else j = 0;
-
-            }
-            if (num == "2")
-            {
-                
-                if (end == a + b)
-                {
-                    j = 2;
-                }
-                else j = 0;
-
-            }
-            if (num == "3")
-            {
-                
-                if (end == a * b)
-                {
-                    j = 3;
-                }
-                else j = 0;
-
-            }
-            return;
         }
     }
 }
