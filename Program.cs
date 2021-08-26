@@ -4,6 +4,7 @@ namespace TIMAmathes
 {
     class Program
     {
+        public string questions;
         static void Main(string[] args)
         {
             int f = 0;
@@ -12,12 +13,12 @@ namespace TIMAmathes
                 Console.WriteLine("Выбери какие примеры тебе нужны:");
                 Console.WriteLine("1. Сложение");
                 Console.WriteLine("2. Вычитание");
-                Console.WriteLine("3. Умнижение");
+                Console.WriteLine("3. Умножение");
                 Console.WriteLine("4. Деление");
                 Console.WriteLine("5. Выход");
                 string num = Console.ReadLine();
                 Random gpg = new Random();
-                string questions;
+                
                 int s = 0;
 
 
@@ -44,13 +45,10 @@ namespace TIMAmathes
                             else j = 0;
 
                         }
-                        s = 0;
+                        
                         Console.WriteLine("Хочешь ещё пример?");
                         questions = Console.ReadLine();
-                        if (questions == "Нет" || questions == "нет")
-                        {
-                            f = 1;
-                        }
+                        
                     }
                 }
                 if (num == "2")
@@ -76,13 +74,9 @@ namespace TIMAmathes
                             else j = 0;
 
                         }
-                        s = 0;
                         Console.WriteLine("Хочешь ещё пример?");
                         questions = Console.ReadLine();
-                        if (questions == "Нет" || questions == "нет")
-                        {
-                            f = 1;
-                        }
+                        
                     }
                 }
                 if (num == "3")
@@ -108,13 +102,10 @@ namespace TIMAmathes
                             else j = 0;
 
                         }
-                        s = 0;
+                        
                         Console.WriteLine("Хочешь ещё пример?");
                         questions = Console.ReadLine();
-                        if (questions == "Нет" || questions == "нет")
-                        {
-                            f = 1;
-                        }
+                        
                     }
                 }
 
@@ -376,5 +367,6 @@ namespace TIMAmathes
                 }
             }
         }
+        
     }
 }
