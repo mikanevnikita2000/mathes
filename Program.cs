@@ -29,27 +29,7 @@ namespace TIMAmathes
                     int a = gpg.Next(0, 1000);
                     int b = gpg.Next(0, 1000);
                     
-                    int thecorrectnessoftheanswer = 0;
-                    while (thecorrectnessoftheanswer == 0)
-                    {
-
-                        Console.WriteLine($"сколько будет: {a} + {b}");
-
-                        int expectedResult = (Convert.ToInt32(Console.ReadLine()));
-                        if (expectedResult == a + b)
-                        {
-                            thecorrectnessoftheanswer = 1;
-                            Console.WriteLine("Молодец, правильно!");
-                        }
-
-                    }
                     
-                    Console.WriteLine("Хочешь ещё пример?");
-                    questions = Console.ReadLine();
-                    if (questions == "Нет" || questions == "нет")
-                            {
-                                end = 1;
-                            }
                 }
                 
              
@@ -311,18 +291,20 @@ namespace TIMAmathes
                 }
             }
         }
-        static void AdditionAndSubtractionAndMultiplication(string num, int expectedResult, int a, int b,int thecorrectnessoftheanswer)
+        static void AdditionAndSubtractionAndMultiplication(string num,  int a, int b)
         {
             
             Random gpg = new Random();
-            
+            int exampleresponse;
             
             if (num == "1")
             {
                 
-                if (expectedResult == a - b)
+                if (expectedResult == a + b)
                 {
-                    thecorrectnessoftheanswer = 1;
+                    
+                    Console.WriteLine($"сколько будет: {a} + {b}");
+                    exampleresponse = a+b;
                 }
                 
 
@@ -330,9 +312,11 @@ namespace TIMAmathes
             if (num == "2")
             {
                 
-                if (expectedResult == a + b)
+                if (expectedResult == a - b)
                 {
-                    thecorrectnessoftheanswer = 2;
+                    
+                    Console.WriteLine($"сколько будет: {a} - {b}");
+                    exampleresponse = a-b;
                 }
                 
 
@@ -342,21 +326,34 @@ namespace TIMAmathes
                 
                 if (expectedResult == a * b)
                 {
-                    thecorrectnessoftheanswer = 3;
+                    
+                    Console.WriteLine($"сколько будет: {a} * {b}");
+                    exampleresponse = a*b;
                 }
-               
-
             }
+            int thecorrectnessoftheanswer = 0;
+                    while (thecorrectnessoftheanswer == 0)
+                    {
+
+                        
+
+                        int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                        if (expectedResult == exampleresponse)
+                        {
+                            thecorrectnessoftheanswer = 1;
+                            Console.WriteLine("Молодец, правильно!");
+                        }
+
+                    }
+                    
+                    Console.WriteLine("Хочешь ещё пример?");
+                    questions = Console.ReadLine();
+                    if (questions == "Нет" || questions == "нет")
+                            {
+                                end = 1;
+                            }
 
             
-            return;
-        }
-        static void Questions(int f, string questions)
-        {
-            if (questions == "Нет" || questions == "нет")
-            {
-                f = 1;
-            }
             return;
         }
     }
