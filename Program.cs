@@ -4,6 +4,7 @@ namespace TIMAmathes
 {
     class Program
     {
+        public string questions;
         static void Main(string[] args)
         {
             int f = 0;
@@ -12,39 +13,44 @@ namespace TIMAmathes
                 Console.WriteLine("Выбери какие примеры тебе нужны:");
                 Console.WriteLine("1. Сложение");
                 Console.WriteLine("2. Вычитание");
-                Console.WriteLine("3. Умнижение");
+                Console.WriteLine("3. Умножение");
                 Console.WriteLine("4. Деление");
                 Console.WriteLine("5. Выход");
                 string num = Console.ReadLine();
                 Random gpg = new Random();
-                string questions;
+                
                 int s = 0;
-             
+
+
                 
                 while (f == 0)
                 {
 
                     int a = gpg.Next(0, 1000);
                     int b = gpg.Next(0, 1000);
-                    int end = 0;
+                    
                     int j = 0;
                     while (j == 0)
                     {
 
                         Console.WriteLine($"сколько будет: {a} + {b}");
-                        
-                        end = (Convert.ToInt32(Console.ReadLine()));
-                        
+
+                        int end = (Convert.ToInt32(Console.ReadLine()));
+                        if (end == a + b)
+                        {
+                            j = 1;
+                            Console.WriteLine("Молодец, правильно!");
+                        }
+                        else j = 0;
 
                     }
-                    s = 0;
+                    
                     Console.WriteLine("Хочешь ещё пример?");
                     questions = Console.ReadLine();
-                    if (questions == "Нет" || questions == "нет")
-                    {
-                        f = 1;
-                    }
+                    
                 }
+                
+             
 
                 if (num == "4")
                 {
@@ -302,13 +308,12 @@ namespace TIMAmathes
                     f = 1;
                 }
             }
-
         }
-        static void AdditionAndSubtractionAndMultiplication(string num, int end, int a, int b)
+        static void AdditionAndSubtractionAndMultiplication(string num, int end, int a, int b,int j)
         {
-            int j = 0;
+            
             Random gpg = new Random();
-            int h = 0;
+            
             
             if (num == "1")
             {
@@ -317,7 +322,7 @@ namespace TIMAmathes
                 {
                     j = 1;
                 }
-                else j = 0;
+                
 
             }
             if (num == "2")
@@ -327,7 +332,7 @@ namespace TIMAmathes
                 {
                     j = 2;
                 }
-                else j = 0;
+                
 
             }
             if (num == "3")
@@ -337,8 +342,18 @@ namespace TIMAmathes
                 {
                     j = 3;
                 }
-                else j = 0;
+               
 
+            }
+
+            
+            return;
+        }
+        static void Questions(int f, string questions)
+        {
+            if (questions == "Нет" || questions == "нет")
+            {
+                f = 1;
             }
             return;
         }
