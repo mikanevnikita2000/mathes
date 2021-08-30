@@ -7,8 +7,8 @@ namespace TIMAmathes
         public string questions;
         static void Main(string[] args)
         {
-            int f = 0;
-            while (f == 0)
+            int end = 0;
+            while (end == 0)
             {
                 Console.WriteLine("Выбери какие примеры тебе нужны:");
                 Console.WriteLine("1. Сложение");
@@ -23,38 +23,40 @@ namespace TIMAmathes
 
 
                 
-                while (f == 0)
+                while (end == 0)
                 {
 
                     int a = gpg.Next(0, 1000);
                     int b = gpg.Next(0, 1000);
                     
-                    int j = 0;
-                    while (j == 0)
+                    int thecorrectnessoftheanswer = 0;
+                    while (thecorrectnessoftheanswer == 0)
                     {
 
                         Console.WriteLine($"сколько будет: {a} + {b}");
 
-                        int end = (Convert.ToInt32(Console.ReadLine()));
-                        if (end == a + b)
+                        int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                        if (expectedResult == a + b)
                         {
-                            j = 1;
+                            thecorrectnessoftheanswer = 1;
                             Console.WriteLine("Молодец, правильно!");
                         }
-                        else j = 0;
 
                     }
                     
                     Console.WriteLine("Хочешь ещё пример?");
                     questions = Console.ReadLine();
-                    
+                    if (questions == "Нет" || questions == "нет")
+                            {
+                                end = 1;
+                            }
                 }
                 
              
 
                 if (num == "4")
                 {
-                    while (f == 0)
+                    while (end == 0)
                     {
                         
                         int prom1 = gpg.Next(0, 9);
@@ -64,8 +66,8 @@ namespace TIMAmathes
                             while (s == 0)
                             {
                                 Console.WriteLine($"сколько будет: {prom2} : 1");
-                                int end = (Convert.ToInt32(Console.ReadLine()));
-                                if (end == prom2)
+                                int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                                if (expectedResult == prom2)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
                                     s = 1;
@@ -80,7 +82,7 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                f = 1;
+                                end = 1;
                             }
                         }
                         if (prom1 == 1)
@@ -91,8 +93,8 @@ namespace TIMAmathes
                             while (s == 0)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 2");
-                                int end = (Convert.ToInt32(Console.ReadLine()));
-                                if (end == n / 2)
+                                int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                                if (expectedResult == n / 2)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
                                     s = 1;
@@ -107,7 +109,7 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                f = 1;
+                                end = 1;
                             }
                         }
                         if (prom1 == 2)
@@ -118,8 +120,8 @@ namespace TIMAmathes
                             while (s == 0)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 3");
-                                int end = (Convert.ToInt32(Console.ReadLine()));
-                                if (end == n / 3)
+                                int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                                if (expectedResult == n / 3)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
                                     s = 1;
@@ -134,7 +136,7 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                f = 1;
+                                end = 1;
                             }
                         }
                         if (prom1 == 3)
@@ -145,8 +147,8 @@ namespace TIMAmathes
                             while (s == 0)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 4");
-                                int end = (Convert.ToInt32(Console.ReadLine()));
-                                if (end == n / 4)
+                                int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                                if (expectedResult == n / 4)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
                                     s = 1;
@@ -161,7 +163,7 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                f = 1;
+                                end = 1;
                             }
                         }
                         if (prom1 == 4)
@@ -172,8 +174,8 @@ namespace TIMAmathes
                             while (s == 0)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 5");
-                                int end = (Convert.ToInt32(Console.ReadLine()));
-                                if (end == n / 5)
+                                int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                                if (expectedResult == n / 5)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
                                     s = 1;
@@ -188,7 +190,7 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                f = 1;
+                                end = 1;
                             }
                         }
                         if (prom1 == 5)
@@ -199,8 +201,8 @@ namespace TIMAmathes
                             while (s == 0)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 6");
-                                int end = (Convert.ToInt32(Console.ReadLine()));
-                                if (end == n / 6)
+                                int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                                if (expectedResult == n / 6)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
                                     s = 1;
@@ -215,7 +217,7 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                f = 1;
+                                end = 1;
                             }
                         }
                         if (prom1 == 6)
@@ -226,8 +228,8 @@ namespace TIMAmathes
                             while (s == 0)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 7");
-                                int end = (Convert.ToInt32(Console.ReadLine()));
-                                if (end == n / 7)
+                                int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                                if (expectedResult == n / 7)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
                                     s = 1;
@@ -242,7 +244,7 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                f = 1;
+                                end = 1;
                             }
                         }
                         if (prom1 == 7)
@@ -253,8 +255,8 @@ namespace TIMAmathes
                             while (s == 0)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 8");
-                                int end = (Convert.ToInt32(Console.ReadLine()));
-                                if (end == n / 8)
+                                int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                                if (expectedResult == n / 8)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
                                     s = 1;
@@ -269,7 +271,7 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                f = 1;
+                                end = 1;
                             }
                         }
                         if (prom1 == 8)
@@ -280,8 +282,8 @@ namespace TIMAmathes
                             while (s == 0)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 9");
-                                int end = (Convert.ToInt32(Console.ReadLine()));
-                                if (end == n / 9)
+                                int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                                if (expectedResult == n / 9)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
                                     s = 1;
@@ -296,20 +298,20 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                f = 1;
+                                end = 1;
                             }
                         }
                     }
                 }
-                f = 0;
+                end = 0;
 
                 if (num == "5")
                 {
-                    f = 1;
+                    end = 1;
                 }
             }
         }
-        static void AdditionAndSubtractionAndMultiplication(string num, int end, int a, int b,int j)
+        static void AdditionAndSubtractionAndMultiplication(string num, int expectedResult, int a, int b,int thecorrectnessoftheanswer)
         {
             
             Random gpg = new Random();
@@ -318,9 +320,9 @@ namespace TIMAmathes
             if (num == "1")
             {
                 
-                if (end == a - b)
+                if (expectedResult == a - b)
                 {
-                    j = 1;
+                    thecorrectnessoftheanswer = 1;
                 }
                 
 
@@ -328,9 +330,9 @@ namespace TIMAmathes
             if (num == "2")
             {
                 
-                if (end == a + b)
+                if (expectedResult == a + b)
                 {
-                    j = 2;
+                    thecorrectnessoftheanswer = 2;
                 }
                 
 
@@ -338,9 +340,9 @@ namespace TIMAmathes
             if (num == "3")
             {
                 
-                if (end == a * b)
+                if (expectedResult == a * b)
                 {
-                    j = 3;
+                    thecorrectnessoftheanswer = 3;
                 }
                
 
