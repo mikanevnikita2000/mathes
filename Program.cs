@@ -332,26 +332,26 @@ namespace TIMAmathes
                 }
             }
             int thecorrectnessoftheanswer = 0;
-                    while (thecorrectnessoftheanswer == 0)
-                    {
+            while (thecorrectnessoftheanswer == 0)
+            {
 
                         
 
-                        int expectedResult = (Convert.ToInt32(Console.ReadLine()));
-                        if (expectedResult == exampleresponse)
-                        {
-                            thecorrectnessoftheanswer = 1;
-                            Console.WriteLine("Молодец, правильно!");
-                        }
+                int expectedResult = (Convert.ToInt32(Console.ReadLine()));
+                if (expectedResult == exampleresponse)
+                {
+                    thecorrectnessoftheanswer = 1;
+                    Console.WriteLine("Молодец, правильно!");
+                }
 
-                    }
+            }
                     
-                    Console.WriteLine("Хочешь ещё пример?");
-                    questions = Console.ReadLine();
-                    if (questions == "Нет" || questions == "нет")
-                            {
-                                end = 1;
-                            }
+            Console.WriteLine("Хочешь ещё пример?");
+            questions = Console.ReadLine();
+            if (questions == "Нет" || questions == "нет")
+                    {
+                        end = 1;
+                    }
 
             
             return;
