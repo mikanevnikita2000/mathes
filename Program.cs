@@ -7,8 +7,8 @@ namespace TIMAmathes
         public string questions;
         static void Main(string[] args)
         {
-            int end = 0;
-            while (end == 0)
+            bool isEnabled = false;
+            while (isEnabled == 0)
             {
                 Console.WriteLine("Выбери какие примеры тебе нужны:");
                 Console.WriteLine("1. Сложение");
@@ -23,7 +23,7 @@ namespace TIMAmathes
 
 
                 
-                while (end == 0)
+                while (isEnabled == false)
                 {
 
                     int a = gpg.Next(0, 1000);
@@ -36,9 +36,9 @@ namespace TIMAmathes
 
                 if (num == "4")
                 {
-                    while (end == 0)
+                    while (isEnabled == false)
                     {
-                        int[] loc = {};
+                        
                         int prom1 = gpg.Next(0, 9);
                         if (prom1 == 0)
                         {
@@ -62,12 +62,12 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                end = 1;
+                                isEnabled = true;
                             }
                         }
                         if (prom1 == 1)
                         {
-                            loc = { 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+                            int[] loc = { 4, 6, 8, 10, 12, 14, 16, 18, 20 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
                             while ( isCorrect == false)
@@ -89,12 +89,12 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                end = 1;
+                                isEnabled = true;
                             }
                         }
                         if (prom1 == 2)
                         {
-                            loc = { 6,9,12,15,18,21,24,28,30 };
+                            int[] loc = { 6,9,12,15,18,21,24,28,30 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
                             while (isCorrect == false)
@@ -116,12 +116,12 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                end = 1;
+                                isEnabled = true;
                             }
                         }
                         if (prom1 == 3)
                         {
-                            loc = { 8,12,16,20,24,28,32,36,40 };
+                            int[] loc = { 8,12,16,20,24,28,32,36,40 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
                             while (isCorrect == false)
@@ -143,12 +143,12 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                end = 1;
+                                isEnabled = true;
                             }
                         }
                         if (prom1 == 4)
                         {
-                            loc = { 10,15,20,25,30,35,40,45,50 };
+                            int[] loc = { 10,15,20,25,30,35,40,45,50 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
                             while (isCorrect == false)
@@ -170,12 +170,12 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                end = 1;
+                                isEnabled = true;
                             }
                         }
                         if (prom1 == 5)
                         {
-                            loc = { 12,18,24,30,36,42,48,54,60 };
+                            int[] loc = { 12,18,24,30,36,42,48,54,60 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
                             while (isCorrect == false)
@@ -197,12 +197,12 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                end = 1;
+                                isHided = true;
                             }
                         }
                         if (prom1 == 6)
                         {
-                            loc = { 14,21,28,35,42,49,56,63,70 };
+                            int[] loc = { 14,21,28,35,42,49,56,63,70 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
                             while (isCorrect == false)
@@ -224,12 +224,12 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                end = 1;
+                                 isHided = true;
                             }
                         }
                         if (prom1 == 7)
                         {
-                            loc = { 16,24,32,40,48,56,64,72,80 };
+                            int[] loc = { 16,24,32,40,48,56,64,72,80 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
                             while (isCorrect == false)
@@ -251,12 +251,12 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                end = 1;
+                                isHided = true;
                             }
                         }
                         if (prom1 == 8)
                         {
-                            loc = { 18,27,36,45,54,63,72,81,90 };
+                            int[] loc = { 18,27,36,45,54,63,72,81,90 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
                             while (isCorrect == false)
@@ -278,16 +278,16 @@ namespace TIMAmathes
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
                             {
-                                end = 1;
+                                isHided = true;
                             }
                         }
                     }
                 }
-                end = 0;
+                isHided = true;
 
                 if (num == "5")
                 {
-                    end = 1;
+                    isHided = true;
                 }
             }
         }
