@@ -18,27 +18,17 @@ namespace TIMAmathes
                 Console.WriteLine("5. Выход");
                 string num = Console.ReadLine();
                 Random gpg = new Random();
-                
                 bool isCorrect = false;
 
-
-                
                 while (isEnabled == false)
                 {
-
-                    int a = gpg.Next(0, 1000);
-                    int b = gpg.Next(0, 1000);
-                    
                     
                 }
                 
-             
-
                 if (num == "4")
                 {
                     while (isEnabled == false)
                     {
-                        
                         int prom1 = gpg.Next(0, 9);
                         if (prom1 == 0)
                         {
@@ -284,46 +274,39 @@ namespace TIMAmathes
                     }
                 }
                 isHided = true;
-
                 if (num == "5")
                 {
                     isHided = true;
                 }
             }
         }
-        static void AdditionAndSubtractionAndMultiplication(string num,  int a, int b)
-        {
-            
+        static void AdditionAndSubtractionAndMultiplication(string num)
+        { 
             Random gpg = new Random();
             int exampleresponse;
+            int a = gpg.Next(0, 1000);
+            int b = gpg.Next(0, 1000);
             
             if (num == "1")
             {
-                
                 if (expectedResult == a + b)
                 {
                     
                     Console.WriteLine($"сколько будет: {a} + {b}");
                     exampleresponse = a+b;
                 }
-                
-
             }
             if (num == "2")
             {
-                
                 if (expectedResult == a - b)
                 {
                     
                     Console.WriteLine($"сколько будет: {a} - {b}");
                     exampleresponse = a-b;
                 }
-                
-
             }
             if (num == "3")
             {
-                
                 if (expectedResult == a * b)
                 {
                     
@@ -333,27 +316,20 @@ namespace TIMAmathes
             }
             int thecorrectnessoftheanswer = 0;
             while (thecorrectnessoftheanswer == 0)
-            {
-
-                        
-
+            {                        
                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                 if (expectedResult == exampleresponse)
                 {
                     thecorrectnessoftheanswer = 1;
                     Console.WriteLine("Молодец, правильно!");
                 }
-
-            }
-                    
+            }                   
             Console.WriteLine("Хочешь ещё пример?");
             questions = Console.ReadLine();
             if (questions == "Нет" || questions == "нет")
             {
                 end = 1;
-            }
-
-            
+            }            
             return;
         }
     }
