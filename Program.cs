@@ -19,7 +19,7 @@ namespace TIMAmathes
                 string num = Console.ReadLine();
                 Random gpg = new Random();
                 
-                int s = 0;
+                bool isCorrect = false;
 
 
                 
@@ -38,26 +38,26 @@ namespace TIMAmathes
                 {
                     while (end == 0)
                     {
-                        
+                        int[] loc = {};
                         int prom1 = gpg.Next(0, 9);
                         if (prom1 == 0)
                         {
                             int prom2 = gpg.Next(0, 99);
-                            while (s == 0)
+                            while ( isCorrect == false)
                             {
                                 Console.WriteLine($"сколько будет: {prom2} : 1");
                                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                                 if (expectedResult == prom2)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
-                                    s = 1;
+                                    isCorrect = true;
                                 }
                                 else
                                 {
                                     Console.WriteLine("попробуй ещё раз");
                                 }
                             }
-                            s = 0;
+                            isCorrect = false;
                             Console.WriteLine("Хочешь ещё пример?");
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
@@ -67,24 +67,24 @@ namespace TIMAmathes
                         }
                         if (prom1 == 1)
                         {
-                            int[] loc = { 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+                            loc = { 4, 6, 8, 10, 12, 14, 16, 18, 20 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
-                            while (s == 0)
+                            while ( isCorrect == false)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 2");
                                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                                 if (expectedResult == n / 2)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
-                                    s = 1;
+                                    isCorrect = true;
                                 }
                                 else
                                 {
                                     Console.WriteLine("попробуй ещё раз");
                                 }
                             }
-                            s = 0;
+                            isCorrect =false;
                             Console.WriteLine("Хочешь ещё пример?");
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
@@ -94,24 +94,24 @@ namespace TIMAmathes
                         }
                         if (prom1 == 2)
                         {
-                            int[] loc = { 6,9,12,15,18,21,24,28,30 };
+                            loc = { 6,9,12,15,18,21,24,28,30 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
-                            while (s == 0)
+                            while (isCorrect == false)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 3");
                                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                                 if (expectedResult == n / 3)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
-                                    s = 1;
+                                    isCorrect = true;
                                 }
                                 else
                                 {
                                     Console.WriteLine("попробуй ещё раз");
                                 }
                             }
-                            s = 0;
+                            isCorrect = false;
                             Console.WriteLine("Хочешь ещё пример?");
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
@@ -121,24 +121,24 @@ namespace TIMAmathes
                         }
                         if (prom1 == 3)
                         {
-                            int[] loc = { 8,12,16,20,24,28,32,36,40 };
+                            loc = { 8,12,16,20,24,28,32,36,40 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
-                            while (s == 0)
+                            while (isCorrect == false)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 4");
                                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                                 if (expectedResult == n / 4)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
-                                    s = 1;
+                                    isCorrect = true;
                                 }
                                 else
                                 {
                                     Console.WriteLine("попробуй ещё раз");
                                 }
                             }
-                            s = 0;
+                            isCorrect = false;
                             Console.WriteLine("Хочешь ещё пример?");
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
@@ -148,24 +148,24 @@ namespace TIMAmathes
                         }
                         if (prom1 == 4)
                         {
-                            int[] loc = { 10,15,20,25,30,35,40,45,50 };
+                            loc = { 10,15,20,25,30,35,40,45,50 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
-                            while (s == 0)
+                            while (isCorrect == false)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 5");
                                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                                 if (expectedResult == n / 5)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
-                                    s = 1;
+                                    isCorrect = true;
                                 }
                                 else
                                 {
                                     Console.WriteLine("попробуй ещё раз");
                                 }
                             }
-                            s = 0;
+                            isCorrect = false;
                             Console.WriteLine("Хочешь ещё пример?");
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
@@ -175,24 +175,24 @@ namespace TIMAmathes
                         }
                         if (prom1 == 5)
                         {
-                            int[] loc = { 12,18,24,30,36,42,48,54,60 };
+                            loc = { 12,18,24,30,36,42,48,54,60 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
-                            while (s == 0)
+                            while (isCorrect == false)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 6");
                                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                                 if (expectedResult == n / 6)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
-                                    s = 1;
+                                    isCorrect = true;
                                 }
                                 else
                                 {
                                     Console.WriteLine("попробуй ещё раз");
                                 }
                             }
-                            s = 0;
+                            isCorrect = false;
                             Console.WriteLine("Хочешь ещё пример?");
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
@@ -202,24 +202,24 @@ namespace TIMAmathes
                         }
                         if (prom1 == 6)
                         {
-                            int[] loc = { 14,21,28,35,42,49,56,63,70 };
+                            loc = { 14,21,28,35,42,49,56,63,70 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
-                            while (s == 0)
+                            while (isCorrect == false)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 7");
                                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                                 if (expectedResult == n / 7)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
-                                    s = 1;
+                                    isCorrect = true;
                                 }
                                 else
                                 {
                                     Console.WriteLine("попробуй ещё раз");
                                 }
                             }
-                            s = 0;
+                            isCorrect = false;
                             Console.WriteLine("Хочешь ещё пример?");
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
@@ -229,24 +229,24 @@ namespace TIMAmathes
                         }
                         if (prom1 == 7)
                         {
-                            int[] loc = { 16,24,32,40,48,56,64,72,80 };
+                            loc = { 16,24,32,40,48,56,64,72,80 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
-                            while (s == 0)
+                            while (isCorrect == false)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 8");
                                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                                 if (expectedResult == n / 8)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
-                                    s = 1;
+                                    isCorrect = true;
                                 }
                                 else
                                 {
                                     Console.WriteLine("попробуй ещё раз");
                                 }
                             }
-                            s = 0;
+                            isCorrect = false;
                             Console.WriteLine("Хочешь ещё пример?");
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
@@ -256,24 +256,24 @@ namespace TIMAmathes
                         }
                         if (prom1 == 8)
                         {
-                            int[] loc = { 18,27,36,45,54,63,72,81,90 };
+                            loc = { 18,27,36,45,54,63,72,81,90 };
                             int prom2 = gpg.Next(0, 9);
                             int n = loc[prom2];
-                            while (s == 0)
+                            while (isCorrect == false)
                             {
                                 Console.WriteLine($"сколько будет: {n} : 9");
                                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                                 if (expectedResult == n / 9)
                                 {
                                     Console.WriteLine("Молодец! Правильно!");
-                                    s = 1;
+                                    isCorrect = true;
                                 }
                                 else
                                 {
                                     Console.WriteLine("попробуй ещё раз");
                                 }
                             }
-                            s = 0;
+                            isCorrect = false;
                             Console.WriteLine("Хочешь ещё пример?");
                             questions = Console.ReadLine();
                             if (questions == "Нет" || questions == "нет")
@@ -349,9 +349,9 @@ namespace TIMAmathes
             Console.WriteLine("Хочешь ещё пример?");
             questions = Console.ReadLine();
             if (questions == "Нет" || questions == "нет")
-                    {
-                        end = 1;
-                    }
+            {
+                end = 1;
+            }
 
             
             return;
