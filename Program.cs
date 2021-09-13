@@ -314,26 +314,27 @@ namespace TIMAmathes
                     exampleresponse = a*b;
                 }
             }
-            int thecorrectnessoftheanswer = 0;
-            while (thecorrectnessoftheanswer == 0)
+            int TheCorrectNessofTheAnswer = 0;
+            while (TheCorrectNessofTheAnswer == 0)
             {                        
                 int expectedResult = (Convert.ToInt32(Console.ReadLine()));
                 if (expectedResult == exampleresponse)
                 {
-                    thecorrectnessoftheanswer = 1;
+                    TheCorrectNessofTheAnswer = 1;
                     Console.WriteLine("Молодец, правильно!");
                 }
             }                   
             Console.WriteLine("Хочешь ещё пример?");
             questions = Console.ReadLine();
             if (questions == "Нет" || questions == "нет")
-            {
-                end = 1;
+            { 
+                isHided = true;
             }            
             return;
         }
+        // static ShowingAnExample()
+        // {
+            
+        // }
     }
 }
-
-
-
